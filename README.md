@@ -1,26 +1,12 @@
 # sapper-template
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
+The default [Sapper](https://github.com/sveltejs/sapper) template, bundling with webpack, with some Three.js boilerplate on index route, shipped with typescript.
+The base was generated thanks to [pixelmund/create-svelte-app](https://github.com/pixelmund/create-svelte-app).
 
 
 ## Getting started
 
-
-### Using `degit`
-
-[`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository. Use either the `rollup` or `webpack` branch in `sapper-template`:
-
-```bash
-# for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
-# for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
-```
-
-
-### Using GitHub templates
-
-Alternatively, you can use GitHub's template feature with the [sapper-template-rollup](https://github.com/sveltejs/sapper-template-rollup) or [sapper-template-webpack](https://github.com/sveltejs/sapper-template-webpack) repositories.
+clone the project, install dependencies, edit src/routes/index.svelte, enjoy.
 
 
 ### Running the project
@@ -76,11 +62,6 @@ import { files } from '@sapper/service-worker';
 ...so that you can cache them (though you can choose not to, for example if you don't want to cache very large files).
 
 
-## Bundler config
-
-Sapper uses Rollup or webpack to provide code-splitting and dynamic imports, as well as compiling your Svelte components. With webpack, it also provides hot module reloading. As long as you don't do anything daft, you can edit the configuration files to add whatever plugins you'd like.
-
-
 ## Production mode and deployment
 
 To start a production version of your app, run `npm run build && npm start`. This will disable live reloading, and activate the appropriate bundler plugins.
@@ -104,8 +85,3 @@ Because of that, it's essential that the bundler doesn't treat the package as an
 ```bash
 npm install -D @sveltejs/svelte-virtual-list
 ```
-
-
-## Bugs and feedback
-
-Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
