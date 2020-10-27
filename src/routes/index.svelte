@@ -6,13 +6,17 @@
 	const state = {
 		frameCounter: 0
 	}
-	const scene = new THREE.Scene()
 	const raycaster = new THREE.Raycaster()
 	const mouse = new THREE.Vector2(1, 1)
-	const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
-	const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true})
+	let renderer: THREE.WebGLRenderer
+	let scene: THREE.Scene
+	let camera: THREE.PerspectiveCamera
 	
-	async function setup () {
+	function setup () {
+		scene = new THREE.Scene()
+		camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
+		renderer = new THREE.WebGLRenderer({alpha: true, antialias: true})
+
 		// renderer
 		renderer.setClearAlpha(0.0)
 		renderer.setClearColor(0x000000, 0)
@@ -65,6 +69,8 @@
 		updateMouse()
 
 		renderer.render(scene, camera)
+
+		TWEEN.update()
 	}
 
 	onMount(setup)
