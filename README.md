@@ -1,4 +1,4 @@
-# sapper-template
+# Sapper-Three-Starter
 
 The default [Sapper](https://github.com/sveltejs/sapper) template, bundling with webpack, with some Three.js boilerplate on index route, shipped with typescript.
 The base was generated thanks to [pixelmund/create-svelte-app](https://github.com/pixelmund/create-svelte-app).
